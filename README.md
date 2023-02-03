@@ -25,7 +25,8 @@ Limitations fonctionnelles : il n’y a pas d’option AVL ( uniquement tab et 
 
 exemple d’execution du langage C :
 
-Mes paramètres sont: -f
+Mes paramètres sont: 
+-f
 j&#39;ai le paramètre f
 j&#39;ai le parametre o
 -f option: data.txt
@@ -39,5 +40,7 @@ line 5: 434.000000
 line 6: 1234.000000
 line 7: 2234.000000
 line 8: 4234.000000
+
 line 9: 7234.560000
+
 Le mode de tri utilisé est un tableau
