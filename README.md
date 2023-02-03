@@ -20,3 +20,24 @@ le gnuplot marche avec un fichier de petite taille directement trié par le shel
 le c tourne en boucle lorsqu'il est ajouté au shell 
 
 Laverton Agath : le programme en C
+
+Limitations fonctionnelles : il n’y a pas d’option AVL ( uniquement tab et ABR)
+
+exemple d’execution du langage C :
+
+Mes paramètres sont: -f
+j&#39;ai le paramètre f
+j&#39;ai le parametre o
+-f option: data.txt
+-o option: adzad.txt
+line 0: 14.560000
+line 1: 34.000000
+line 2: 124.000000
+line 3: 134.000000
+line 4: 234.000000
+line 5: 434.000000
+line 6: 1234.000000
+line 7: 2234.000000
+line 8: 4234.000000
+line 9: 7234.560000
+Le mode de tri utilisé est un tableau
