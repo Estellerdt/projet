@@ -1,0 +1,58 @@
+parametres du script:
+
+type des donnees (une au moins, cumulables):
+-------------------
+-t<mode> : temperature 
+	mode: 1 (min,max,moy par station en ordre croissant du num station)
+	mode: 2 (moyenne par date/heure par station en ordre chronologique de date-heure) 	
+	mode: 3 (tous les donnees triees par date/heure puis par num station croissant)
+-p<mode> : pression
+	(meme mode que temperature)
+-w : vent : orientation moyenne et vitesse moyenne par station, trie par num station
+-m : humidite : humidite max par station
+-h : haltitude : altitude de station trie en decroissant
+
+
+
+lieu des donnees -geographie (optionnel, une au max):
+------------------------------
+▪ option -F : (F)rance : France métropolitaine + Corse.
+▪ option -G : (G)uyane française.
+▪ option -S : (S)aint-Pierre et Miquelon
+▪ option -A : (A)ntilles.
+▪ option -O : (O)céan indien.
+▪ option -Q : antarcti(Q)ue.
+
+Date des donnees (optionnel):
+------------------------------
+-d <min> <max> : format date YYYY-MM-DD
+
+
+Chois algo de trie (une au max, avl par defaut si rien metionne):
+-----------------------------------------------------------------
+
+--tab: lineaire (tab/liste chainee)
+--abr:
+--avl: 
+
+nom du fichier source de donnees (obligatoire):
+---------------------------------
+-f <nom_fichier> 
+
+option help (optionnel):
+------------
+--help :
+
+
+Moteur du script:
+	- lire et verifier les parametres
+	- verifier que l'executable C existe,sinon lancer un Makefile de compilation
+        et verifier le resultat de compilation
+
+	pour chaque option de type de donnees faire le suivant:
+		- filtrer les données du fichier (selon les options)
+		- écrire le résultat du filtrage dans un fichier
+		- lancer le programme C avec nom fichier et mode de tri 
+		    syntaxe: a.out -f<fichier source> -o<fichier_sortie> [-r] --tab/--abr/--avl
+		- vérifier que le programme C s’est bien terminé (exit 0/1/2/3/4) et récupère le fichier
+		- lancer l’utilitaire gnuPlot pour le graphique
